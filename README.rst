@@ -15,9 +15,9 @@ requests-cloudkit is available for download through the Python Package Index (Py
 Usage
 -----
 
-requests-cloudkit provides an authentication object that can be passed directly to requests to authenticate HTTP calls. To work with the CloudKit server-to-server API, you'll need to follow Apple's instructions to generate a certificate and a server-to-server key (see `Accessing CloudKit Using a Server-to-Server Key <https://developer.apple.com/library/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/SettingUpWebServices/SettingUpWebServices.html#//apple_ref/doc/uid/TP40015240-CH24-SW6>`_).
+requests-cloudkit provides an authentication object that can be passed directly to requests to authenticate calls to the CloudKit API. Before working with the CloudKit server-to-server API, you'll first need to follow Apple's instructions to generate a certificate and a server-to-server key (see `Accessing CloudKit Using a Server-to-Server Key <https://developer.apple.com/library/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/SettingUpWebServices/SettingUpWebServices.html#//apple_ref/doc/uid/TP40015240-CH24-SW6>`_).
 
-Once you have these values, just plug them into a CloudKitAuth object, which you can use with requests to make API calls to CloudKit. E.g.:
+Once you have these values, just plug them into a CloudKitAuth object, which you can use with requests interface with CloudKit. E.g.:
 
 .. code:: pycon
 
@@ -51,6 +51,8 @@ If you want to pass in body data for a POST, provide a single argument to the ca
 .. code:: pycon
 
    >>> cloudkit.POST.my.request(data)
+
+For the full list of CloudKit Server-to-Server API capabilities, reference `Apple's developer documentation <https://developer.apple.com/library/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240-CH1-SW1>`_.
 
 Support
 -------
