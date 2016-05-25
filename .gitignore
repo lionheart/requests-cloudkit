@@ -1,0 +1,8 @@
+*.pyc
+.DS_Store
+*.egg-info/
+build/
+dist/
+*.un~
+.tox
+twitter.py
