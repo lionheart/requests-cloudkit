@@ -59,7 +59,7 @@ setup(
     author_email=metadata.__email__,
     classifiers=classifiers,
     cmdclass={'test': TestCommand},
-    description="A Python wrapper for restmapper",
+    description="Apple CloudKit server-to-server support for the requests Python library.",
     install_required=["requests>=2.0.0", "ecdsa>=0.13"],
     extras_require={'restmapper': ["requests>=2.0.0", "ecdsa>=0.13", "restmapper==0.1.0"]},
     keywords="requests cloudkit",
