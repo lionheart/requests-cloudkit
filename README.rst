@@ -57,7 +57,7 @@ For the full list of CloudKit Server-to-Server API capabilities, reference `Appl
 Support
 -------
 
-If you like this library, or need help implementing it, send me an email: dan@lionheartsw.com.
+If you like this library, or need help implementing it, send us an email: hi@lionheartsw.com.
 
 License
 -------
