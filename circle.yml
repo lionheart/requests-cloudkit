@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - pip install PIL --allow-external PIL --allow-unverified PIL
+    - python setup.py install
 test:
   override:
     - python setup.py test
