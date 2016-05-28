@@ -1,16 +1,18 @@
 #!/usr/bin/env/python
 # -*- coding: utf-8 -*-
 
-import unittest
-import os
-from requests_cloudkit import metadata
 from distutils.cmd import Command
+import os
 import re
+import unittest
 
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
+
+metadata = {}
+execfile("requests_cloudkit/metadata.py", metadata)
 
 with open(os.path.join(os.path.dirname(__file__), "README.rst")) as file:
     long_description = file.read()
@@ -55,19 +57,19 @@ class TestCommand(Command):
 
 
 setup(
-    author=metadata.__author__,
-    author_email=metadata.__email__,
+    author=metadata['__author__'],
+    author_email=metadata['__email__'],
     classifiers=classifiers,
     cmdclass={'test': TestCommand},
     description="Apple CloudKit server-to-server support for the requests Python library.",
     install_required=["requests>=2.0.0", "ecdsa>=0.13"],
     extras_require={'restmapper': ["requests>=2.0.0", "ecdsa>=0.13", "restmapper==0.1.0"]},
     keywords="requests cloudkit",
-    license=metadata.__license__,
+    license=metadata['__license__'],
     long_description=long_description,
     name='requests-cloudkit',
     package_data={'': ['LICENSE', 'README.rst']},
     packages=['requests_cloudkit'],
     url="https://github.com/lionheart/requests-cloudkit",
-    version=metadata.__version__,
+    version=metadata['__version__'],
 )
