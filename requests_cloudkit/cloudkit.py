@@ -41,7 +41,7 @@ class CloudKitAuth(requests.auth.AuthBase):
     def encode_body(self, body):
         if body is None:
             body = ""
-        else:
+        elif type(body) != str:
             body = json.dumps(body, separators=(',', ':'))
 
         h = hashlib.sha256(body)
