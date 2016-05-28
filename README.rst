@@ -1,7 +1,7 @@
 Requests-CloudKit |ci| |downloads| |version|
 ============================================
 
-This project provides an authentication handler for Apple's CloudKit server-to-server API for the requests Python library. In English, this means that this library lets you interact with CloudKit with Python in a server environment. It just has two dependencies--`requests <https://github.com/requests/requests>`_ and python-ecdsa--and lets you skip all of the dull and boring cryptographic signing steps when authenticating with CloudKit on your own.
+This project provides an authentication handler for Apple's CloudKit server-to-server API for the requests Python library. In English, this means that this library lets you interact with CloudKit with Python in a server environment. It just has two dependencies--`requests <https://github.com/kennethreitz/requests>`_ and python-ecdsa--and lets you skip all of the dull and boring cryptographic signing steps when authenticating with CloudKit on your own. While the underlying code is pretty straightforward, there was no correct code sample available online that described how to do this--but now there is!
 
 Installation
 ------------
