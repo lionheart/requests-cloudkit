@@ -1,7 +1,7 @@
 Requests-CloudKit |ci| |downloads| |version|
 ============================================
 
-This project provides Apple CloudKit server-to-server support for the requests Python library.
+This project provides an authentication handler for Apple's CloudKit server-to-server API for the requests Python library.
 
 Installation
 ------------
@@ -15,9 +15,9 @@ requests-cloudkit is available for download through the Python Package Index (Py
 Usage
 -----
 
-requests-cloudkit provides an authentication object that can be passed directly to requests to authenticate calls to the CloudKit API. Before working with the CloudKit server-to-server API, you'll first need to follow Apple's instructions to generate a certificate and a server-to-server key (see `Accessing CloudKit Using a Server-to-Server Key <https://developer.apple.com/library/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/SettingUpWebServices/SettingUpWebServices.html#//apple_ref/doc/uid/TP40015240-CH24-SW6>`_).
+requests-cloudkit provides an authentication handler that can be passed directly to the requests library to authenticate requests to the CloudKit API. Before working with the CloudKit server-to-server API, you'll first need to follow Apple's instructions to generate a certificate and a server-to-server key (see `Accessing CloudKit Using a Server-to-Server Key <https://developer.apple.com/library/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/SettingUpWebServices/SettingUpWebServices.html#//apple_ref/doc/uid/TP40015240-CH24-SW6>`_).
 
-Once you have these values, just plug them into a CloudKitAuth object, which you can use with requests interface with CloudKit. E.g.:
+Once you have these values, just plug them into a CloudKitAuth object, which you can use with requests to interface with CloudKit. E.g.:
 
 .. code:: pycon
 
@@ -25,6 +25,9 @@ Once you have these values, just plug them into a CloudKitAuth object, which you
    >>> from requests_cloudkit import CloudKitAuth
    >>> auth = CloudKitAuth(key_id=YOUR_KEY_ID, key_file_name=YOUR_PRIVATE_KEY_PATH)
    >>> requests.get("https://api.apple-cloudkit.com/database/[version]/[container]/[environment]/public/zones/list", auth=auth)
+
+Usage Requests-CloudKit with RestMapper
+---------------------------------------
 
 requests-cloudkit can also be used with `RestMapper <https://github.com/lionheart/python-restmapper>`_ to integrate directly with the CloudKit API.
 
@@ -44,7 +47,7 @@ Now, you can start making requests to the CloudKit API using a nice attribute sy
 
    >>> response = cloudkit.public.zones.list()
 
-...will hit https://api.apple-cloudkit.com/database/[version]/[container]/[environment]/public/zones/list.
+The above will hit https://api.apple-cloudkit.com/database/[version]/[container]/[environment]/public/zones/list.
 
 If you want to pass in body data for a POST, provide a single argument to the call to the API, and specify "POST" as the first attribute. I.e.
 
@@ -57,7 +60,7 @@ For the full list of CloudKit Server-to-Server API capabilities, reference `Appl
 Support
 -------
 
-If you like this library, or need help implementing it, send us an email: hi@lionheartsw.com.
+If you like this library, or need help implementing it, just send us an email: hi@lionheartsw.com.
 
 License
 -------
