@@ -78,7 +78,7 @@ setup(
     cmdclass={'test': TestCommand},
     description="Apple CloudKit server-to-server support for the requests Python library.",
     install_required=["requests>=2.0.0", "ecdsa>=0.13"],
-    extras_require={'restmapper': ["requests>=2.0.0", "ecdsa>=0.13", "restmapper==0.1.0"]},
+    extras_require={'restmapper': ["requests>=2.0.0", "ecdsa>=0.13", "restmapper>=0.1.0"]},
     keywords="requests cloudkit",
     license=metadata['__license__'],
     long_description=long_description,
