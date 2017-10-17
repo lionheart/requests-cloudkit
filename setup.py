@@ -45,15 +45,15 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
     "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
     "Natural Language :: English",
     "Operating System :: OS Independent",
-    "Programming Language :: Python",
     "Programming Language :: Python :: 2.6",
     "Programming Language :: Python :: 2.7",
-    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Utilities",
-    "License :: OSI Approved :: Apache Software License",
 ]
 
 class TestCommand(Command):
