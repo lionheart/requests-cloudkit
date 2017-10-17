@@ -19,14 +19,15 @@ from distutils.cmd import Command
 import os
 import re
 import unittest
+import runpy
 
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
-metadata = {}
-execfile("requests_cloudkit/metadata.py", metadata)
+metadata_filename = "requests_cloudkit/metadata.py"
+metadata = runpy.run_path(metadata_filename)
 
 with open(os.path.join(os.path.dirname(__file__), "README.rst")) as file:
     long_description = file.read()
