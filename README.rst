@@ -1,5 +1,5 @@
 Requests-CloudKit |ci| |version|
-============================================
+================================
 
 This project provides an authentication handler for Apple's CloudKit server-to-server API for the requests Python library. In English, this means that this library lets you interact with CloudKit with Python in a server environment. It just has two dependencies--`requests <https://github.com/kennethreitz/requests>`_ and python-ecdsa--and lets you skip all of the dull and boring cryptographic signing steps when authenticating with CloudKit on your own. While the underlying code is pretty straightforward, there was no correct code sample available online that described how to do this--but now there is!
 
@@ -54,7 +54,7 @@ If you want to pass in body data for a POST, provide a single argument to the ca
 .. code:: pycon
 
    >>> cloudkit.POST.my.request(data)
-   
+
 Or:
 
 .. code:: pycon
@@ -68,13 +68,13 @@ Support
 
 If you like this library, or need help implementing it, just send us an email: hi@lionheartsw.com.
 
-License
--------
-
-.. image:: http://img.shields.io/pypi/l/requests-cloudkit.svg?style=flat
-   :target: LICENSE
+License |license|
+-----------------
 
 Apache License, Version 2.0. See `LICENSE <LICENSE>`_ for details.
+
+.. |license| image:: http://img.shields.io/pypi/l/requests-cloudkit.svg?style=flat
+.. _license: LICENSE
 
 .. |ci| image:: https://img.shields.io/travis/lionheart/requests-cloudkit.svg?style=flat
 .. _ci: https://travis-ci.org/lionheart/requests-cloudkit.py
