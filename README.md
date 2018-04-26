@@ -69,7 +69,7 @@ If you like this library, or need help implementing it, just send us an email: h
 
 ## License [![License][license-image]][license-url]
 
-Apache License, Version 2.0. See [LICENSE](license-url) for details.
+Apache License, Version 2.0. See [LICENSE][license-url] for details.
 
 [license-image]: http://img.shields.io/pypi/l/requests-cloudkit.svg?style=flat
 [license-url]: LICENSE
