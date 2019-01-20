@@ -27,16 +27,16 @@ class CloudKitAuth(requests.auth.AuthBase):
     See: https://developer.apple.com/library/archive/documentation/DataManagement/Conceptual/CloudKitWebServicesReference/index.html
     """
 
-    def __init__(self, key_id, pem=None, key_file_name=None):
+    def __init__(self, key_id, key_file_name=None, pem=None):
         """
         The key_id is required. You can find it when you create a
         server-to-server certificate in your CloudKit Dashboard.
         """
-        self.key_id = key_id
-        self.pem = pem
+        self.key_id        = key_id
         self.key_file_name = key_file_name
+        self.pem           = pem
 
-        if not self.pem and not self.key_file_name:
+        if not self.key_file_name and not self.pem:
             raise Exception("Requires one of pem or key_file_name")
 
     def __call__(self, r):
