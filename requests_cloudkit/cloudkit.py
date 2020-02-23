@@ -75,7 +75,8 @@ class CloudKitAuth(requests.auth.AuthBase):
         if self.pem:
             return self.pem
         else:
-            return open(self.key_file_name).read()
+            with open(self.key_file_name) as f:
+                return f.read()
 
     def encode_body(self, body):
         """
